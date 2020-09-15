@@ -33,6 +33,3 @@ class RemoteDriver(Driver):
 
     def get_screenshot_as_file(self, name: str) -> None:
         self.driver.get_screenshot_as_file(name)
-
-    def getPath(self):
-        return os.getcwd()
