@@ -28,7 +28,7 @@ class RemoteDriver(Driver):
         self.driver.maximize_window()
 
     def close(self) -> None:
-        self.driver.close()
+        # self.driver.close()
         self.driver.quit()
 
     def get_screenshot_as_file(self, name: str) -> None:

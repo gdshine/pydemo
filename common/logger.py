@@ -12,7 +12,7 @@ log_path = r_config(conf_dir, "log", "log_path")
 
 class Log():
 
-    def __init__(self, log_path):
+    def __init__(self):
         self.logname = os.path.join(log_path, '{0}.log'.format(time.strftime('%Y-%m-%d')))
 
     def __printconsole(self, level, message):
@@ -60,4 +60,4 @@ class Log():
 
 
 if __name__ == '__main__':
-    Log(log_path).info("adasd")
+    Log().info("adasd")
