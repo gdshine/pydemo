@@ -12,8 +12,8 @@ else:
 
 class Config(object):
 
-    def __init__(self, path):
-        self.path = path
+    def __init__(self):
+        self.path = conf_dir
         self.cf = configparser.ConfigParser()
         self.cf.read(self.path, encoding='utf-8')
 
@@ -39,6 +39,7 @@ class Config(object):
         except:
             return False
         return True
+
 
 def r_config(config_file_path, field, key):
     rf = configparser.ConfigParser()

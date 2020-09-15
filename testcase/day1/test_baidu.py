@@ -81,19 +81,19 @@ class TestBaidu():
             remotedriver.close()
             print("test ending......")
 
-    def test_03(self,getBrowser):
-
-        # remotedriver = RemoteDriver(getBrowser['url'],eval(getBrowser['browser']))
-        # driver = remotedriver.driver
-        baidu = BaiduPage(getBrowser['url'],eval(getBrowser['browser']))
-        try:
-            baidu.get('http://www.baidu.com')
-            baidu.find_element('id', 'kw').send_keys('test')
-            baidu.find_element('id', 'su').click()
-            baidu.maximize_window()
-            baidu.set_page_load_timeout(1)
-            baidu.get_screenshot_as_file('d:/test.png')
-        finally:
-            baidu.close()
-            Log().info("test ending......")
-            print("test ending......")
+    # def test_03(self,getBrowser):
+    #
+    #     # remotedriver = RemoteDriver(getBrowser['url'],eval(getBrowser['browser']))
+    #     # driver = remotedriver.driver
+    #     baidu = BaiduPage(getBrowser['url'],eval(getBrowser['browser']))
+    #     try:
+    #         baidu.get('http://www.baidu.com')
+    #         baidu.find_element('id', 'kw').send_keys('test')
+    #         baidu.find_element('id', 'su').click()
+    #         baidu.maximize_window()
+    #         baidu.set_page_load_timeout(1)
+    #         baidu.get_screenshot_as_file('d:/test.png')
+    #     finally:
+    #         baidu.close()
+    #         Log().info("test ending......")
+    #         print("test ending......")
